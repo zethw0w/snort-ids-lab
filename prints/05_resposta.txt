@@ -1,0 +1,5 @@
+$ id=$(tshark -r snort.log -Y "frame.number==10" -T fields -e ip.id 2>/dev/null); ref=$(tshark -r snort.log -Y "frame.number==4" -T fields -e http.referer 2>/dev/null); echo "ID 10o pacote: $id"; echo "Referer 4o pacote: $ref"; echo "Formato da resposta: FIAP{id_referer}"; echo "=> FIAP{${id}_${ref}}"
+ID 10o pacote: 0xc0a1
+Referer 4o pacote: http://www.ethereal.com/development.html
+Formato da resposta: FIAP{id_referer}
+=> FIAP{0xc0a1_http://www.ethereal.com/development.html}

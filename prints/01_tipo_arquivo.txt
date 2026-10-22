@@ -1,0 +1,6 @@
+$ file snort.log; capinfos snort.log 2>/dev/null | grep -E "File type|Number of packets|First packet"
+snort.log: pcap capture file, microsecond ts (little-endian) - version 2.4 (Ethernet, capture length 1514)
+File type:           Wireshark/tcpdump/... - pcap
+Number of packets:   43
+First packet time:   2004-05-13 06:17:07.311224
+                     Number of packets = 43

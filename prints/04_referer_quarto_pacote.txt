@@ -1,0 +1,4 @@
+$ echo "Pacote 4:"; tshark -r snort.log -Y "frame.number==4" -V 2>/dev/null | grep -iE "Referer|Full request URI" | head
+Pacote 4:
+    Referer: http://www.ethereal.com/development.html\r\n
+    [Full request URI: http://www.ethereal.com/download.html]
